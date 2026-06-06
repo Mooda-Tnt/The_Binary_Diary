@@ -1,0 +1,341 @@
+// @ts-check
+// `@type` JSDoc annotations allow editor autocompletion and type checking
+// (when paired with `@ts-check`).
+// There are various equivalent ways to declare your Docusaurus config.
+// See: https://docusaurus.io/docs/api/docusaurus-config
+
+// NODE_ENV is defined when running Docusaurus
+// Is initialized to "production" only when "yarn build" is fired
+// So on local host, isProd will be set to false ("yarn start" will initialize NODE_ENV to "development").
+const isProd = process.env.NODE_ENV === "production";
+
+import { themes as prismThemes } from "prism-react-renderer";
+
+import pluginSeriesRoute from "./plugins/docusaurus-plugin-series-route/index.cjs";
+import pluginTagRoute from "./plugins/docusaurus-plugin-tag-route/index.cjs";
+import remarkReplaceWords from "./plugins/remark-replace-terms/index.cjs";
+import remarkTreeToComponent from "./plugins/remark-tree-to-component/index.cjs";
+import remarkSnippetLoader from "./plugins/remark-snippet-loader/index.cjs";
+
+// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
+
+/** @type {import('@docusaurus/types').Config} */
+const config = {
+  title: "The Binary Diary",
+  tagline:
+    "Welcome to my cybersecurity diary, where I document my research journey and share insights and practical guides while breaking down technical concepts along the way.",
+  favicon: "img/favicon.ico",
+
+  // Set the production url of your site here
+  url: "https://thebinarydiary.com",
+  // Set the /<baseUrl>/ pathname under which your site is served
+  // For GitHub pages deployment, it is often '/<projectName>/'
+  baseUrl: "/",
+
+  // GitHub pages deployment config.
+  // If you aren't using GitHub pages, you don't need these.
+  organizationName: "Mohamad-Alhamwi", // Usually your GitHub org/user name.
+  projectName: "The_Binary_Diary", // Usually your repo name.
+
+  noIndex: false, // Make sure our HTML pages will contains the <meta name="robots" content="index, follow"> tag
+
+  onBrokenAnchors: "throw",
+  // WE SHOULD IGNORE BROKEN LINKS because Docusaurus’s link checker doesn't
+  // recognize dynamic routes created via plugins; and we're using at least one
+  // i.e. "plugins/docusaurus-plugin-series-route/index.cjs".
+  // If we don't ignore broken links, Docusaurus will always throw an error during build
+  // time.
+  onBrokenLinks: "ignore",
+  onDuplicateRoutes: "throw",
+
+  /*customFields: {
+    bluesky: {
+      // This is the Bluesky handle as displayed in your Bluesky profile page
+      handle: "avonture.be",
+    },
+  },*/
+
+  // https://github.com/facebook/docusaurus/issues/10556
+  future: {
+    v4: {
+      removeLegacyPostBuildHeadAttribute: true,
+      useCssCascadeLayers: true,
+    },
+    experimental_faster: {
+      swcJsLoader: true,
+      swcJsMinimizer: true,
+      swcHtmlMinimizer: true,
+      lightningCssMinimizer: true,
+      mdxCrossCompilerCache: true,
+    },
+    experimental_storage: {
+      type: "localStorage",
+      namespace: true,
+    },
+  },
+
+  // Even if you don't use internationalization, you can use this field to set
+  // useful metadata like html lang. For example, if your site is Chinese, you
+  // may want to replace "en" with "zh-Hans".
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en"],
+  },
+  // TODO: Add simple analytics later (Matomo or similar).
+  /*scripts: [
+    {
+      src: "https://scripts.withcabin.com/hello.js",
+      async: true,
+      defer: true,
+    },
+    {
+      src: "https://matomo.avonture.be/matomo.js",
+      async: true,
+    },
+  ],*/
+  presets: [
+    [
+      "classic",
+      /** @type {import('@docusaurus/preset-classic').Options} */
+      ({
+        docs: false,
+        blog: {
+          routeBasePath: "/blog",
+          blogTitle: "Cybersecurity Blog",
+          blogDescription: "A blog focusing heavily on binary analysis, reverse engineering, and low-level topics.",
+          showReadingTime: true,
+          feedOptions: {
+            type: ['rss', 'atom', 'json'],
+            xslt: true,
+          },
+          //editUrl: "TODO:UPDATE",
+          exclude: isProd ? ["**/.unpublished/**"] : [], // only exclude in prod
+          blogSidebarTitle: "All posts",
+          blogSidebarCount: "ALL",
+          // showLastUpdateTime: true,
+          // Useful options to enforce blogging best practices
+          onInlineTags: "throw",
+          onInlineAuthors: "warn",
+          onUntruncatedBlogPosts: "ignore",
+          // Replace words like "vscode" or "markdown" to "VSCode" and "Markdown"
+          beforeDefaultRemarkPlugins: [
+            remarkSnippetLoader,
+            remarkReplaceWords,
+            remarkTreeToComponent,
+          ],
+        },
+        sitemap: {
+          changefreq: "weekly",
+          priority: 0.5,
+          ignorePatterns: ["/blog/tags/**"],
+          filename: "sitemap.xml",
+        },
+        theme: {
+          customCss: "./src/css/custom.css",
+        },
+      }),
+    ],
+  ],
+  plugins: [
+    [
+      "@docusaurus/plugin-ideal-image",
+      {
+        quality: 80,
+        max: 1200,
+        min: 320,
+        steps: 4,
+        disableInDev: false,
+        sizes:
+          "(max-width: 480px) 320px, (max-width: 768px) 600px, (max-width: 1024px) 900px, 100vw",
+        formats: ["webp", "auto"],
+        fallbackFormat: "auto",
+      },
+    ],
+    [pluginSeriesRoute, {}],
+    [pluginTagRoute, {}],
+    ["./plugins/blog-feed-plugin/index.js", { maxItems: 20 }],
+    [
+      "./plugins/ascii-injector/index.mjs",
+      { bannerPath: "src/data/banner.txt" },
+    ],
+    require.resolve("docusaurus-plugin-image-zoom"),
+  ],
+  headTags: [
+    {
+      tagName: "link",
+      attributes: {
+        rel: "preconnect",
+        href: "https://fonts.googleapis.com",
+      },
+    },
+    {
+      tagName: "link",
+      attributes: {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+        crossorigin: "anonymous",
+      },
+    },
+    {
+      tagName: "link",
+      attributes: {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap",
+      },
+    },
+    // TODO: Add simple analytics later (Matomo or similar).
+    /*{
+      tagName: "script",
+      attributes: { type: "text/javascript" },
+      innerHTML: `
+      var _paq = window._paq = window._paq || [];
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="https://matomo.avonture.be/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '1']);
+      })();
+    `,
+    },*/
+    {
+      tagName: "script",
+      attributes: {
+        type: "application/ld+json",
+      },
+      innerHTML: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        name: "The Binary Diary",
+        url: "https://www.thebinarydiary.com",
+        description:
+          "A blog focusing heavily on binary analysis, reverse engineering, and low-level topics.",
+        potentialAction: {
+          "@type": "SearchAction",
+          target: "https://www.thebinarydiary.com/search?q={search_term_string}",
+          "query-input": "required name=search_term_string",
+        },
+      }),
+    },
+    {
+      tagName: "script",
+      attributes: {
+        type: "application/ld+json",
+      },
+      innerHTML: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "The Binary Diary",
+        url: "https://www.thebinarydiary.com",
+        logo: "https://www.thebinarydiary.com/img/logo.png",
+        // TODO: EDIT later.
+        /*sameAs: [
+          "https://bsky.app/profile/avonture.be",
+          "https://github.com/cavo789",
+        ],*/
+      }),
+    },
+  ],
+  themeConfig:
+    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+    ({
+      // Replace with your project's social card
+      //image: "img/social-card.jpg",
+      navbar: {
+        // auto-hide the navbar when the user will scroll down, show again when scroll up
+        // hideOnScroll: true,
+        title: "The Binary Diary",
+        logo: {
+          alt: "The Binary Diary",
+          src: "img/logo.png",
+          width: 40,
+          height: 40,
+        },
+        items: [
+          {
+            href: "/blog",
+            label: "Blog",
+          },
+          {
+            href: "/series",
+            label: "Series",
+          },
+          {
+            href: "/blog/tags",
+            label: "Tags",
+          },
+          /*{
+            href: "/repositories",
+            label: "Repositories",
+          },
+          {
+            href: "/blog/archive",
+            label: "Archive",
+          },*/
+          {
+            href: "/about",
+            label: "About me",
+          },
+          {
+            href: "https://github.com/Mohamad-Alhamwi/The_Binary_Diary",
+            label: "GitHub",
+            position: "right",
+            className: "header-github-link",
+            "aria-label": "GitHub repository",
+          },
+        ],
+      },
+      footer: {
+        style: "dark",
+        copyright: `Copyright © ${new Date().getFullYear()} The Binary Diary. Powered by Docusaurus.`,
+      },
+      prism: {
+        theme: prismThemes.github,
+        darkTheme: prismThemes.dracula,
+        defaultLanguage: "php",
+        additionalLanguages: ["bash", "css", "javascript", "php", "python"],
+      },
+      tableOfContents: {
+        minHeadingLevel: 2,
+        maxHeadingLevel: 5,
+      },
+      // Configuration du zoom
+      zoom: {
+        // Sélecteur CSS pour cibler les images à zoomer (les images dans le markdown qui ne sont pas des liens)
+        // selector: ".markdown :not(em) > img",
+        selector: ".markdown img:not(.navbar-logo):not(.no-zoom img)",
+
+        background: {
+          light: "rgb(255, 255, 255)",
+          dark: "rgb(50, 50, 50)",
+        },
+      },
+      algolia: {
+        // @see https://docusaurus.io/docs/search for documentation
+        // @see https://dashboard.algolia.com/ for appId, apiKey and indexName
+        // TODO: UPDATE algolia with your own key!
+
+        // The application ID provided by Algolia
+        appId: "SIOYZRXPKJ",
+
+        // Public API key: it is safe to commit it
+        apiKey: "3e2bd9067f4916ba2d338c5b57631b92",
+
+        indexName: "avonture",
+
+        // Optional: see doc section below
+        contextualSearch: true,
+
+        // Optional: Algolia search parameters
+        searchParameters: {},
+
+        // Optional: path for search page that enabled by default (`false` to disable it)
+        searchPagePath: "search",
+
+        // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
+        insights: false,
+      },
+    }),
+};
+
+export default config;

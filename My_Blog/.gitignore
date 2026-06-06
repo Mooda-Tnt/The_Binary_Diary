@@ -1,0 +1,21 @@
+# Dependencies
+/node_modules
+/.yarn
+
+# Production
+/build
+
+# Generated files
+.docusaurus
+.cache-loader
+
+# Misc
+/.env
+/.prompts
+
+/*.log*
+
+*/**/*:Zone.Identifier
+
+**/__pycache__/**
+
