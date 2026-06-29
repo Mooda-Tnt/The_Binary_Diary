@@ -1,0 +1,256 @@
+/**
+ * custom.css for Docusaurus - Thebinarydiary
+ * Optimized for Mobile Sticky TOC + Desktop Ghost TOC
+ * American English Localization
+ */
+
+:root {
+  --ifm-font-family-base: "Inter", sans-serif;
+  --ifm-font-family-monospace: "Fira Code", "JetBrains Mono", monospace;
+
+  /* Green Palette */
+  --ifm-color-primary: #5cbdb9;
+  --ifm-color-primary-dark: #49b4b0;
+  --ifm-color-primary-darker: #45aaa6;
+  --ifm-color-primary-darkest: #398c89;
+  --ifm-color-primary-light: #70c5c2;
+  --ifm-color-primary-lighter: #7ac9c6;
+  --ifm-color-primary-lightest: #98d5d3;
+
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-container-width: 100%;
+}
+
+[data-theme="dark"] {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* --- GENERAL STRUCTURE --- */
+
+.container {
+  max-width: var(--ifm-container-width);
+  margin: 0 auto;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+.navbar__inner {
+  max-width: var(--ifm-container-width);
+  margin: 0 auto;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+.navbar__logo > img {
+  width: auto;
+}
+
+/* --- MOBILE STICKY TOC LOGIC --- */
+.blog-toc-mobile {
+  display: none; /* Hidden by default on Desktop */
+}
+
+@media (max-width: 996px) {
+  .blog-toc-mobile {
+    display: block;
+    position: sticky;
+    top: var(--ifm-navbar-height);
+    z-index: 100;
+
+    /* VISUAL UPGRADE: Card Style with Brand Accent */
+    background-color: var(
+      --ifm-background-surface-color
+    ); /* Slightly different from main background if theme supports it, otherwise falls back */
+    border: 1px solid var(--ifm-color-emphasis-200); /* Thin subtle border around */
+    border-left: 5px solid var(--ifm-color-primary); /* Strong brand accent on the left */
+    border-radius: 0 4px 4px 0; /* Rounded corners only on right */
+
+    margin-bottom: 2rem;
+    padding: 0.75rem 1rem; /* More padding for "button" feel */
+
+    /* Stronger shadow to lift it above scrolling content */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+    /* Optional: Backdrop blur for a modern "frosted glass" feel (supported browsers only) */
+    backdrop-filter: blur(8px);
+    /* Need to make background slightly transparent for blur to work.
+       We use a hex with alpha or rgba. Here is a generic approach: */
+    background: rgba(255, 255, 255, 0.95);
+  }
+
+  /* Dark mode specific adjustment for the background transparency */
+  [data-theme="dark"] .blog-toc-mobile {
+    background: rgba(
+      30,
+      30,
+      30,
+      0.95
+    ); /* Adjust based on your dark theme bg color */
+  }
+
+  /* --- FIX: Anchor Scrolling Overlap ---
+   * Since the "On this page" button is sticky, we must increase the scroll margin
+   * of headings so they don't get hidden behind the button when clicked.
+   */
+  html {
+    /* Use scroll-padding-top on the container for better anchor positioning support */
+    scroll-padding-top: calc(var(--ifm-navbar-height) + 1rem) !important;
+  }
+}
+
+/* --- GRID ADJUSTMENTS (Original code kept) --- */
+
+/* Left Sidebar */
+.col.col--3:first-child {
+  flex-basis: 16.6666%;
+  max-width: 16.6666%;
+  padding-right: 0.5rem;
+}
+
+/* Main Content */
+.col.col--6,
+.col.col--7,
+.col.col--9 {
+  flex-basis: 66.6666%;
+  max-width: 66.6666%;
+}
+
+/* Desktop Right TOC */
+.theme-doc-toc-desktop {
+  position: relative;
+  margin-left: auto;
+  margin-right: 0;
+  max-width: 16.6666%;
+  flex-basis: 16.6666%;
+  padding-left: 1rem;
+  padding-right: 0;
+  display: block;
+}
+
+/* Large screens override */
+@media screen and (min-width: 1600px) {
+  .col.col--6,
+  .col.col--7,
+  .col.col--9 {
+    flex-basis: 70%;
+    max-width: 70%;
+  }
+  .theme-doc-toc-desktop,
+  .col.col--3:first-child {
+    flex-basis: 15%;
+    max-width: 15%;
+  }
+}
+
+/* Responsive override */
+@media screen and (max-width: 996px) {
+  /* Standardized to 996px (Docusaurus default) instead of 768px */
+  .col.col--3,
+  .col.col--6,
+  .col.col--7,
+  .col.col--9,
+  .col.col--12 {
+    flex-basis: 100% !important;
+    max-width: 100% !important;
+  }
+  /* Hides the desktop ToC on mobile */
+  .theme-doc-toc-desktop {
+    display: none !important;
+  }
+}
+
+/* --- MISC STYLES --- */
+
+.card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  text-decoration: none !important;
+  color: var(--ifm-color-emphasis-800);
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--ifm-shadow-lg);
+  color: var(--ifm-color-emphasis-900);
+}
+.card img {
+  max-width: 100%;
+  max-height: 100%;
+  transition: transform 0.2s ease-in-out;
+}
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.footer {
+  --ifm-footer-padding-vertical: 0.5rem;
+}
+.theme-edit-this-page {
+  display: block;
+  margin-bottom: 20px;
+}
+.about_images {
+  max-width: 100%;
+  height: auto;
+}
+
+/* DocSearch styling */
+[data-theme="light"] .DocSearch {
+  --docsearch-muted-color: var(--ifm-color-secondary-darkest);
+  --docsearch-container-background: rgba(94, 100, 112, 0.7);
+  --docsearch-modal-background: var(--ifm-color-secondary-lighter);
+  --docsearch-searchbox-background: var(--ifm-color-secondary);
+  --docsearch-searchbox-focus-background: var(--ifm-color-white);
+  --docsearch-hit-color: var(--ifm-font-color-base);
+  --docsearch-hit-active-color: var(--ifm-color-white);
+  --docsearch-hit-background: var(--ifm-color-white);
+  --docsearch-footer-background: var(--ifm-color-white);
+}
+
+[data-theme="dark"] .DocSearch {
+  --docsearch-text-color: var(--ifm-font-color-base);
+  --docsearch-muted-color: var(--ifm-color-secondary-darkest);
+  --docsearch-container-background: rgba(47, 55, 69, 0.7);
+  --docsearch-modal-background: var(--ifm-background-color);
+  --docsearch-searchbox-background: var(--ifm-background-color);
+  --docsearch-searchbox-focus-background: var(--ifm-color-black);
+  --docsearch-hit-color: var(--ifm-font-color-base);
+  --docsearch-hit-active-color: var(--ifm-color-white);
+  --docsearch-hit-background: var(--ifm-color-emphasis-100);
+  --docsearch-footer-background: var(--ifm-background-surface-color);
+  --docsearch-key-gradient: linear-gradient(
+    -26.5deg,
+    var(--ifm-color-emphasis-200) 0%,
+    var(--ifm-color-emphasis-100) 100%
+  );
+}
+
+.main-wrapper > .container > .row > .col.col--9,
+.main-wrapper > .container > .row > .col.col--6,
+.main-wrapper > .container > .row > .col.col--7 {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.screenshot {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+  box-shadow: var(--ifm-shadow-md);
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%; /* To avoid being too large */
+}
+
+[data-theme="dark"] .screenshot {
+  border-color: var(--ifm-color-emphasis-500);
+}
