@@ -1,0 +1,5 @@
+User-Agent: *
+Sitemap: https://www.thebinarydiary.com/sitemap.xml
+Disallow: /*index.xml$
+Disallow: /index.json
+Disallow: /search/index.json
