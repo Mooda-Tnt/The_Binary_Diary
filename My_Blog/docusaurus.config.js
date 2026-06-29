@@ -267,10 +267,10 @@ const config = {
             href: "/blog/archive",
             label: "Archive",
           },*/
-          {
+          /*{
             href: "/about",
             label: "About me",
-          },
+          },*/
           {
             href: "https://github.com/Mooda-Tnt/The_Binary_Diary",
             label: "GitHub",
