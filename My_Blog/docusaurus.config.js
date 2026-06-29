@@ -24,7 +24,7 @@ const config = {
   title: "The Binary Diary",
   tagline:
     "Welcome to my cybersecurity diary, where I document my research journey and share insights and practical guides while breaking down technical concepts along the way.",
-  favicon: "img/favicon.ico",
+  favicon: "img/shared/favicon.ico",
 
   // Set the production url of your site here
   url: "https://thebinarydiary.com",
@@ -49,10 +49,7 @@ const config = {
   onDuplicateRoutes: "throw",
 
   /*customFields: {
-    bluesky: {
-      // This is the Bluesky handle as displayed in your Bluesky profile page
-      handle: "avonture.be",
-    },
+
   },*/
 
   // https://github.com/facebook/docusaurus/issues/10556
@@ -227,12 +224,10 @@ const config = {
         "@type": "Organization",
         name: "The Binary Diary",
         url: "https://www.thebinarydiary.com",
-        logo: "https://www.thebinarydiary.com/img/logo.png",
-        // TODO: EDIT later.
-        /*sameAs: [
-          "https://bsky.app/profile/avonture.be",
-          "https://github.com/cavo789",
-        ],*/
+        logo: "https://www.thebinarydiary.com/img/shared/logo.png",
+        sameAs: [
+          "https://github.com/Mooda-Tnt",
+        ],
       }),
     },
   ],
@@ -247,7 +242,7 @@ const config = {
         title: "The Binary Diary",
         logo: {
           alt: "The Binary Diary",
-          src: "img/logo.png",
+          src: "img/shared/logo.png",
           width: 40,
           height: 40,
         },
@@ -277,7 +272,7 @@ const config = {
             label: "About me",
           },
           {
-            href: "https://github.com/Mohamad-Alhamwi/The_Binary_Diary",
+            href: "https://github.com/Mooda-Tnt/The_Binary_Diary",
             label: "GitHub",
             position: "right",
             className: "header-github-link",
