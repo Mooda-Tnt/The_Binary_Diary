@@ -1,0 +1,80 @@
+.revisionHistoryContainer {
+  /* On imite le background plat de Series */
+  background-color: var(--ifm-color-emphasis-100) !important;
+  border-left: 4px solid var(--ifm-color-primary);
+  border-radius: 4px;
+  padding: 1.25rem;
+  box-shadow: none !important;
+}
+
+.revisionHistoryTitle {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem; /* Réduit pour matcher la discrétion de Series */
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--ifm-color-primary);
+}
+
+.timeline {
+  position: relative;
+}
+
+/* Ligne verticale grise */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 17px; /* Milieu de l'icône de 34px */
+  height: calc(100% - 10px);
+  width: 2px;
+  background: var(--ifm-color-emphasis-300);
+}
+
+.timelineItem {
+  display: flex;
+  position: relative;
+  margin-bottom: 1.5rem;
+  min-height: 34px;
+}
+
+.timelineItem:last-child {
+  margin-bottom: 0;
+}
+
+.timelineIcon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  /* On utilise le fond du container pour l'icône */
+  background: var(--ifm-color-emphasis-100);
+  border: 2px solid var(--ifm-color-success);
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.timelineContent {
+  /* On décale tout le texte après l'icône */
+  padding-left: 45px;
+  flex: 1;
+}
+
+.timelineDate {
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--ifm-color-success);
+  margin-bottom: 0.25rem;
+}
+
+.timelineDescription {
+  line-height: 1.5;
+  color: var(--ifm-color-content);
+  font-size: 0.95rem;
+}

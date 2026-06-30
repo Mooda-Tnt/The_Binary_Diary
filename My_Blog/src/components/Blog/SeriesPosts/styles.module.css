@@ -1,0 +1,66 @@
+.seriesBlogPost {
+  background-color: var(--ifm-color-secondary-lightest);
+  border-left: 4px solid var(--ifm-color-primary);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 4px;
+  color: var(--ifm-font-color-base);
+  transition: background-color 200ms ease-in-out, color 200ms ease-in-out, border-color 200ms ease-in-out;
+}
+
+.seriesBlogPost p {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.seriesBlogPost ul {
+  list-style-type: none;
+  padding-left: 0;
+  counter-reset: post-counter;
+  margin-bottom: 0;
+}
+
+.seriesBlogPost li {
+  counter-increment: post-counter;
+  display: flex;
+  align-items: center;
+}
+
+.seriesBlogPost li:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.seriesBlogPost li::before {
+  content: counter(post-counter);
+  margin-right: 0.75rem;
+  font-weight: bold;
+  color: var(--ifm-color-content-secondary);
+  font-size: 1.1rem;
+}
+
+.seriesBlogPost li a,
+.seriesBlogPost li span {
+  text-decoration: none;
+  color: var(--ifm-font-color-base);
+}
+
+.seriesBlogPost li a:hover {
+  text-decoration: underline;
+  color: var(--ifm-color-primary);
+}
+
+.currentPost {
+  font-weight: bold;
+}
+
+.currentPostDimmed {
+  opacity: 0.6;
+}
+
+/* Dark Mode Override using Docusaurus data-attribute */
+:global(html[data-theme='dark']) .seriesBlogPost {
+  background-color: var(--ifm-background-surface-color);
+  border-left-color: var(--ifm-color-primary);
+}

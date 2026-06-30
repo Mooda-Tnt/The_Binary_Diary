@@ -1,0 +1,56 @@
+.steps_wrapper {
+  margin: 1.5rem 0;
+  /* On force le même background que Updated */
+  background-color: var(--ifm-background-surface-color) !important;
+  border-left: 3px solid var(--accent-color) !important;
+  border-radius: var(--ifm-card-border-radius, 12px);
+  position: relative;
+  overflow: visible; /* Permet aux icônes de dépasser comme sur le Changelog */
+}
+
+/* On ne définit plus de --bg-color, seulement l'accent */
+.steps_wrapper[data-variant="steps"] {
+  --accent-color: var(--ifm-color-primary);
+}
+
+.steps_wrapper[data-variant="prerequisites"] {
+  --accent-color: var(--ifm-color-secondary-darkest);
+}
+
+.steps_wrapper[data-variant="remember"] {
+  --accent-color: var(--ifm-color-warning);
+}
+
+.steps_title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  /* Couleur du texte harmonisée */
+  color: var(--ifm-heading-color);
+}
+
+.step_bullet {
+  position: absolute;
+  left: -17px; /* Ajuste pour centrer la bulle sur la bordure de 3px */
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 34px;
+  height: 34px;
+  /* Fond identique à la carte pour l'effet "troué" sur la bordure */
+  background-color: var(--ifm-background-surface-color);
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.step_content {
+  flex: 1;
+  padding-left: 25px; /* Compense le décalage de l'icône */
+  color: var(--ifm-font-color-base);
+}

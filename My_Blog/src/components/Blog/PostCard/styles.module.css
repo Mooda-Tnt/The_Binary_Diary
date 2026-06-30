@@ -1,0 +1,96 @@
+:root {
+  --card-radius: 14px;
+  --card-transition: 0.2s ease-in-out;
+  --card-hover-transform: translateY(-4px);
+  --card-img-height: 180px;
+}
+
+.counter {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  border-radius: 8px;
+  color: var(--ifm-color-primary-dark);
+  margin-top: 0.5rem;
+}
+
+[data-theme="dark"] .counter {
+  background: var(--ifm-color-primary-darkest);
+  color: var(--ifm-color-primary-light);
+}
+
+.date {
+  color: var(--ifm-color-secondary-dark);
+  font-size: 0.95em;
+  margin-bottom: 8px;
+  font-style: italic;
+}
+
+[data-theme="dark"] .date {
+  color: var(--ifm-color-secondary-light);
+}
+
+.cardEnhanced {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 280px;
+  border-radius: var(--card-radius);
+  background: var(--ifm-background-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  transition: transform var(--card-transition), box-shadow var(--card-transition);
+  overflow: hidden;
+}
+
+[data-theme="dark"] .cardEnhanced {
+  border-color: var(--ifm-color-emphasis-800);
+}
+
+.cardBodyEnhanced {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.cardEnhanced:hover {
+  transform: var(--card-hover-transform);
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+[data-theme="dark"] .cardEnhanced:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.cardImageEnhanced img {
+  width: 100%;
+  height: var(--card-img-height);
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  padding: 1rem;
+  background: var(--ifm-color-emphasis-100);
+  transition: transform var(--card-transition);
+}
+
+[data-theme="dark"] .cardImageEnhanced img {
+  background: var(--ifm-color-emphasis-900);
+}
+
+.cardEnhanced:hover .cardImageEnhanced img {
+  transform: scale(1.03);
+}
+
+.cardTitleLink {
+  color: var(--ifm-font-color-base);
+  transition: color 0.15s ease;
+  text-decoration: none;
+}
+
+.cardTitleLink:hover {
+  color: var(--ifm-color-primary);
+}
+
+.description {
+  color: var(--ifm-font-color-secondary);
+}

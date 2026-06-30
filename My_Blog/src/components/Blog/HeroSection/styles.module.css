@@ -1,0 +1,151 @@
+/* Hero Section Container */
+.heroHeader {
+  padding: 4rem 0;
+  width: 100%;
+  margin-bottom: 2rem;
+
+  /* Default Light Mode background (Pale Yellow) */
+  background: #fcfcec;
+
+  background-image:
+  linear-gradient(
+    to right,
+    rgba(252, 252, 236, 0.95) 40%,
+    rgba(252, 252, 236, 0.6) 70%,
+    rgba(252, 252, 236, 0.0) 100%
+  ),
+  url('/img/homepage/hero_header.png');
+
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: cover;
+
+  /* Smooth transition when toggling themes */
+  transition: background-color 200ms ease-in-out;
+}
+
+/* Dark Mode Override - Targeting the Docusaurus global theme attribute */
+:global(html[data-theme='dark']) .heroHeader {
+  /* Uses standard Docusaurus dark surface color */
+  background: var(--ifm-background-surface-color);
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr; /* More space for text, less for video */
+  gap: 4rem;
+  align-items: center; /* Center vertically */
+  max-width: var(--ifm-container-width);
+  margin: 0 auto;
+  padding: 0 var(--ifm-spacing-horizontal);
+}
+
+/* Text Column */
+.introText h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.introText h1 span {
+  color: var(--ifm-color-primary); /* Highlights name or keyword */
+  background: linear-gradient(
+    120deg,
+    var(--ifm-color-primary) 0%,
+    #d946ef 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.introText p {
+  font-size: 1.25rem;
+  opacity: 0.8;
+  margin-bottom: 2rem;
+}
+
+.buttonsContainer {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.arrowIcon {
+  margin-left: 8px;
+}
+
+.videoWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+
+  border-radius: 24px;
+  overflow: hidden;
+
+  /* Keep shadow for depth */
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2);
+
+  /* Transparent background to blend perfectly with the container */
+  background-color: transparent;
+
+  aspect-ratio: 1 / 1;
+
+  /* Optional: Fix for border-radius glitches on some browsers */
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+.videoElement {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  /* Scale fix: 1% zoom to hide potential sub-pixel gaps */
+  transform: scale(1.01);
+}
+
+/* Mute Button (Positioned over the video) */
+.muteButton {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.muteButton:hover {
+  background-color: var(--ifm-color-primary);
+  transform: scale(1.1);
+}
+
+/* IPAD and mobile: Vertical Stack */
+@media (max-width: 1024px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .introText h1 {
+    font-size: 2.2rem;
+  }
+
+  .videoWrapper {
+    display: none;
+  }
+
+  .heroHeader {
+    background-image: none;
+  }
+}
