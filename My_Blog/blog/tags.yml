@@ -1,0 +1,9 @@
+ghidra:
+  label: "Ghidra"
+  permalink: "/tags/ghidra"
+  description: "Tips, tutorials, and deep dives into Ghidra for binary analysis."
+
+vi:
+  label: "Vi"
+  permalink: "/tags/vi"
+  description: "Tutorials, Tips, and configurations for the Vi/Vim editor."
