@@ -1,6 +1,6 @@
 const SERIES_DATA = [
   {
-    name: "Exploring Ghidra",
+    name: "The Ghidra Journey — Part I: Foundations",
     description: "Learn, understand, and dive deep into the realm of Ghidra.",
     image: "/img/series/ghidra.png",
   },
