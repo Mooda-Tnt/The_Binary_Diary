@@ -2,7 +2,7 @@ const SERIES_DATA = [
   {
     name: "The Ghidra Journey — Part I: Foundations",
     description: "Learn, understand, and dive deep into the realm of Ghidra.",
-    image: "/img/series/ghidra.png",
+    image: "/img/series/ghidra-part-I-foundations.png",
   },
   {
     name: "End your VI suffering",
