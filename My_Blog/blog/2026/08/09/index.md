@@ -4,7 +4,7 @@ title: H7CTF International 2024 — No Paste
 date: 2026-08-09
 description:  Write-ups for CTF challenges I solved during the H7CTF International 2024 competition.
 authors: [mooda-tnt]
-image: /img/blog_posts/vi_introduction-to-vi.png
+image: /img/blog_posts/h7ctf-international-2024_no-paste.png
 series: "H7CTF International 2024"
 mainTag: ctf
 tags: [ctf, write-ups, web]
