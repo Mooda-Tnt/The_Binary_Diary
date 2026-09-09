@@ -9,6 +9,11 @@ const SERIES_DATA = [
     description: "Explore and dip your toes into the world of one of the most versatile text editors out there: VI",
     image: "/img/series/vi-part-I-basics.png",
   },
+  {
+    name: "H7CTF International 2024",
+    description: "Write-ups for CTF challenges I solved during the H7CTF International 2024 competition.",
+    image: "/img/series/h7ctf-international-2024.png",
+  },
 ];
 
 export default SERIES_DATA;

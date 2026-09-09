@@ -26,4 +26,19 @@ write-ups:
 ctf:
   label: "CTF"
   permalink: "/tags/ctf"
-  description: "Write-ups and walkthroughs of CTFs I participated in and challenges I solved on CTF platforms.."
+  description: "Write-ups and walkthroughs of CTFs I participated in and challenges I solved on CTF platforms."
+
+web:
+  label: "Web"
+  permalink: "/tags/web"
+  description: "Write-ups and walkthroughs of topics or CTFs in the web category."
+
+reverse:
+  label: "Reverse Engineering"
+  permalink: "/tags/reverse-engineering"
+  description: "Write-ups and walkthroughs of topics or CTFs related to reverse engineering."
+
+pwn:
+  label: "Pwn"
+  permalink: "/tags/pwn"
+  description: "Write-ups and walkthroughs of challenges I solved in CTFs I participated in or on CTF platforms in the pwn category."
