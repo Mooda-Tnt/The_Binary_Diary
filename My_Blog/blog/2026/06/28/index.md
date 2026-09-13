@@ -99,9 +99,19 @@ When launching Ghidra for the first time, you might run into the following error
 > ERROR: The 'java' command could not be found in your PATH or with JAVA_HOME.
 Please refer to the Getting Started document's Troubleshooting section.
 
-Since Ghidra is primarily written in Java, it needs a Java Runtime Environment (JRE). This error simply means that Ghidra tried to launch Java but couldn't find a JRE. This problem could stem from three common causes: either Java is not installed, or Java is installed but not in `$PATH`, or the `JAVA_HOME` environment variable is incorrect.
+Since Ghidra is primarily written in Java, it needs a Java Development Kit (JDK). This error simply means that Ghidra tried to launch Java but couldn't find a suitable JDK. To see if a JDK is installed, run the following commands:
 
-So, if you don't have Java installed, just Google it! 😄
+```
+java --version
+javac --version
+```
+
+If either command indicates that Java cannot be found, just install the default JDK by running the following commands:
+
+```
+sudo apt update
+sudo apt install default-jdk
+```
 </AlertBox>
 
 ## Closing Comments
