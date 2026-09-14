@@ -28,7 +28,9 @@ From this point onward, all the magic you do will happen inside the **CodeBrowse
 
 ## The CodeBrowser Desktop
 
-After importing the binary into the Ghidra Project window and double-clicking it, you will be presented with the CodeBrowser, as shown below:
+After importing the binary into the Ghidra Project window and double-clicking it, you will be presented with the CodeBrowser, as shown below.
+
+Actually, the first time you open an imported binary, a window will show up telling you that the binary has not been analyzed yet and asking whether you would like to analyze it now. For now, just click **Yes**, followed by **Analyze**, and do not worry about it at all. I'll explain what it is and what it does in the very next article. For now, just focus on the CodeBrowser window:
 
 ![The CodeBrowser desktop.](./images/code-browser-pre-analysis.png)
 
