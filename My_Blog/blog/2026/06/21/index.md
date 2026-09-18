@@ -1,6 +1,6 @@
 ---
 slug: vi/introduction
-title: Introduction To Vi
+title: Introduction to Vi
 date: 2026-06-21
 description: Get started with the notorious text editor, vi.
 authors: [mooda-tnt]
