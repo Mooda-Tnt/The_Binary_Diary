@@ -42,3 +42,23 @@ pwn:
   label: "Pwn"
   permalink: "/tags/pwn"
   description: "Write-ups and walkthroughs of challenges I solved in CTFs I participated in or on CTF platforms in the pwn category."
+
+pico_ctf:
+  label: "PicoCTF"
+  permalink: "/tags/pico_ctf"
+  description: "Write-ups and walkthroughs of challenges I solved on PicoGym."
+
+100_re_challenges_challenge:
+  label: "100 RR Challenges Challenge"
+  permalink: "/tags/100_re_challenges_challenge"
+  description: "Write-ups, walkthroughs, and reflections on a challenge I started to sharpen my reverse engineering skills."
+
+cybersecurity:
+  label: "Cybersecurity"
+  permalink: "/tags/cybersecurity"
+  description: "Guides, roadmaps, and personal experiences in cybersecurity."
+
+learning_journey:
+  label: "Learning Journey"
+  permalink: "/tags/learning_journey"
+  description: "Personal experiences and reflections on my own learning journey in cybersecurity."
