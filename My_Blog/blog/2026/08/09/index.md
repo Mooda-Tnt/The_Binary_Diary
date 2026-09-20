@@ -25,9 +25,9 @@ In this challenge, we come across a login web page prompting us to "Bypass The R
 
 ![Alt text](./images/1.png)
 
-The first thing to do here is to try playing around with the form by providing inputs to see how it reacts. When we try to give  an input, we notice that not only does it prevent us from pasting, it even restricts us from focusing (interacting/typing) on the input filed. So the next step that comes to mind is to investigate the source code to understand what is going on.
+The first thing to do here is to try playing around with the form by providing inputs to see how it reacts. When we try to give an input, we notice that not only does it prevent us from pasting, it even restricts us from focusing (interacting/typing) on the input filed. So the next step that comes to mind is to investigate the source code to understand what is going on.
 
-Looking at the page source, we notice a constraint in place set by the **readonly** atrribute. According to the MDN documentation: "The Boolean readonly attribute, when present, makes the element not mutable, meaning the user can not edit the control."
+Looking at the page source, we notice a constraint in place set by the **readonly** attribute. According to the MDN documentation: "The Boolean readonly attribute, when present, makes the element not mutable, meaning the user can not edit the control."
 
 ![Alt text](./images/2.png)
 
