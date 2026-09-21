@@ -49,7 +49,7 @@ pico_ctf:
   description: "Write-ups and walkthroughs of challenges I solved on PicoGym."
 
 100_re_challenges_challenge:
-  label: "100 RR Challenges Challenge"
+  label: "100 RE Challenges Challenge"
   permalink: "/tags/100_re_challenges_challenge"
   description: "Write-ups, walkthroughs, and reflections on a challenge I started to sharpen my reverse engineering skills."
 
