@@ -7,7 +7,7 @@ authors: [mooda-tnt]
 image: /img/blog_posts/h7ctf-international-2024_question.png
 series: "H7CTF International 2024"
 mainTag: ctf
-tags: [ctf, write-ups, pwn]
+tags: [ctf, writeups, pwn]
 ---
 
 ![Question, A pwn challenge from H7CTF International 2024.](/img/blog_posts/h7ctf-international-2024_question.png)

@@ -7,7 +7,7 @@ authors: [mooda-tnt]
 image: /img/blog_posts/h7ctf-international-2024_exponential-enigma.png
 series: "H7CTF International 2024"
 mainTag: ctf
-tags: [ctf, write-ups, reverse]
+tags: [ctf, writeups, reverse]
 ---
 
 ![Exponential Enigma, A reverse engineering challenge from H7CTF International 2024.](/img/blog_posts/h7ctf-international-2024_exponential-enigma.png)

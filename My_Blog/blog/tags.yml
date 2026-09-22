@@ -18,40 +18,40 @@ tutorials:
   permalink: "/tags/tutorials"
   description: "Step-by-step guided pathways for mastering a specific tool or skill in cybersecurity."
 
-write-ups:
-  label: "Write-ups"
-  permalink: "/tags/write-ups"
+writeups:
+  label: "Writeups"
+  permalink: "/tags/writeups"
   description: "Detailed articles on technical topics and thorough CTF walkthroughs."
 
 ctf:
   label: "CTF"
   permalink: "/tags/ctf"
-  description: "Write-ups and walkthroughs of CTFs I participated in and challenges I solved on CTF platforms."
+  description: "Writeups and walkthroughs of CTFs I participated in and challenges I solved on CTF platforms."
 
 web:
   label: "Web"
   permalink: "/tags/web"
-  description: "Write-ups and walkthroughs of topics or CTFs in the web category."
+  description: "Writeups and walkthroughs of topics or CTFs in the web category."
 
 reverse:
   label: "Reverse Engineering"
   permalink: "/tags/reverse-engineering"
-  description: "Write-ups and walkthroughs of topics or CTFs related to reverse engineering."
+  description: "Writeups and walkthroughs of topics or CTFs related to reverse engineering."
 
 pwn:
   label: "Pwn"
   permalink: "/tags/pwn"
-  description: "Write-ups and walkthroughs of challenges I solved in CTFs I participated in or on CTF platforms in the pwn category."
+  description: "Writeups and walkthroughs of challenges I solved in CTFs I participated in or on CTF platforms in the pwn category."
 
 pico_ctf:
   label: "PicoCTF"
   permalink: "/tags/pico_ctf"
-  description: "Write-ups and walkthroughs of challenges I solved on PicoGym."
+  description: "Writeups and walkthroughs of challenges I solved on PicoGym."
 
 100_re_challenges_challenge:
   label: "100 RE Challenges Challenge"
   permalink: "/tags/100_re_challenges_challenge"
-  description: "Write-ups, walkthroughs, and reflections on a challenge I started to sharpen my reverse engineering skills."
+  description: "Writeups, walkthroughs, and reflections on a challenge I started to sharpen my reverse engineering skills."
 
 cybersecurity:
   label: "Cybersecurity"

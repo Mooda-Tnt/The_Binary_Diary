@@ -7,7 +7,7 @@ authors: [mooda-tnt]
 image: /img/blog_posts/h7ctf-international-2024_no-paste.png
 series: "H7CTF International 2024"
 mainTag: ctf
-tags: [ctf, write-ups, web]
+tags: [ctf, writeups, web]
 ---
 
 ![No Paste, A web challenge from H7CTF International 2024.](/img/blog_posts/h7ctf-international-2024_no-paste.png)
