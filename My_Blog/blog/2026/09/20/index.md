@@ -22,7 +22,7 @@ This blog post is both a reflection on the main reasons why I am bad at CTFs and
 
 <!-- truncate -->
 
-## My First Wall:
+## My First Wall
 
 Back in the day, when I was first introduced to CTFs by a friend of mine called Hamza, they were so exciting to me that every time I decided to participate in one, I would think about it all night long, if not for a couple of days beforehand. When the day finally came, I would jump onto my laptop, excited to see what was waiting for me.
 
