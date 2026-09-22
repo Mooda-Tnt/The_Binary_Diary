@@ -2,7 +2,7 @@
 slug: ctf/h7ctf-international-2024_exponential-enigma
 title: H7CTF International 2024 — Exponential Enigma
 date: 2026-08-23
-description:  Write-ups for CTF challenges I solved during the H7CTF International 2024 competition.
+description: A writeup of the Exponential Enigma challenge I solved during the H7CTF International 2024 competition.
 authors: [mooda-tnt]
 image: /img/blog_posts/h7ctf-international-2024_exponential-enigma.png
 series: "H7CTF International 2024"
@@ -15,7 +15,7 @@ tags: [ctf, writeups, reverse]
 <Intro>
 ## Introduction
 
-In this write-up, I walk through how I solved **Exponential Enigma**, a reverse engineering challenge from H7CTF International 2024.
+In this writeup, I walk through how I solved **Exponential Enigma**, a reverse engineering challenge from H7CTF International 2024.
 </Intro>
 
 <!-- truncate -->

@@ -2,7 +2,7 @@
 slug: ctf/h7ctf-international-2024_question
 title: H7CTF International 2024 — Question
 date: 2026-08-16
-description:  Write-ups for CTF challenges I solved during the H7CTF International 2024 competition.
+description:  A writeup of the Question challenge I solved during the H7CTF International 2024 competition.
 authors: [mooda-tnt]
 image: /img/blog_posts/h7ctf-international-2024_question.png
 series: "H7CTF International 2024"
@@ -15,7 +15,7 @@ tags: [ctf, writeups, pwn]
 <Intro>
 ## Introduction
 
-This write-up walks through my solution to **Question**, a pwn challenge from H7CTF International 2024.
+This writeup walks through my solution to **Question**, a pwn challenge from H7CTF International 2024.
 </Intro>
 
 <!-- truncate -->

@@ -2,7 +2,7 @@
 slug: ctf/h7ctf-international-2024_no-paste
 title: H7CTF International 2024 — No Paste
 date: 2026-08-09
-description:  Write-ups for CTF challenges I solved during the H7CTF International 2024 competition.
+description:  A writeup of the No Paste challenge I solved during the H7CTF International 2024 competition.
 authors: [mooda-tnt]
 image: /img/blog_posts/h7ctf-international-2024_no-paste.png
 series: "H7CTF International 2024"
@@ -15,7 +15,7 @@ tags: [ctf, writeups, web]
 <Intro>
 ## Introduction
 
-This write-up covers **No Paste**, a web challenge from H7CTF International 2024.
+This writeup covers **No Paste**, a web challenge from H7CTF International 2024.
 </Intro>
 
 <!-- truncate -->
