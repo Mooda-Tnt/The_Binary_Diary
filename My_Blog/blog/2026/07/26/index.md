@@ -9,7 +9,6 @@ series: "End your VI suffering — Part I: Basics"
 mainTag: vi
 tags: [vi, tutorials]
 ---
----
 
 ![Understand vi's interface and learn how to escape and save your files.](/img/blog_posts/vi_getting-around-vi-the-layout-saving-and-quitting.png)
 
