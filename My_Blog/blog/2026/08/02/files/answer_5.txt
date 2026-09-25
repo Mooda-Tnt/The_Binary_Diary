@@ -1,0 +1,1 @@
+At the first non-blank character of line 10, which is `A`. The cursor would be at the first character of this line, which is `SPACE` (the first space).

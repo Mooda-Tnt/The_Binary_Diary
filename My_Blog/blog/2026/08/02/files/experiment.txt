@@ -1,0 +1,11 @@
+This is an example paragraph with letters, words, spaces, and punctuation—commas, periods, semicolons; colons: parentheses (like these), quotation marks "like these," question marks? and exclamation marks!—to demonstrate movement commands and their behavior in vi while moving around and navigating through different parts of a text file. 
+
+You can move from one word to another, jump between lines, and position the cursor exactly where you want it.
+
+
+This is some more dummy text just so I have plenty of text to explain movement commands to you.
+Do not forget to follow along with me!
+
+        This line starts with a tab.
+  And this line starts with two spaces.
+

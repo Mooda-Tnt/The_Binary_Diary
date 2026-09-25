@@ -1,0 +1,1 @@
+Count which column the `e` is in, starting from one. The `e` is in the 12th column, so the command is 12|.
