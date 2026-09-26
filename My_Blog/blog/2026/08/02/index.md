@@ -101,7 +101,7 @@ Run `vi experiment`, enter insert mode by pressing `i`, and paste the following 
 
 Now, press `ESC` to enter command mode and run `:set nu` to make line numbers visible so you can easily follow my instructions.
 
-At this moment, we are at the beginning of line 1 at the `T`. Press `$`. Where is the cursor right now?
+At this moment, we are at the end of the file because we pasted the text we copied. So hit the key `-` several times so that the cursor is now positioned at the beginning of line 1 at the `T`. Press `$`. Where is the cursor right now?
 
 <Snippet
   filename="Answer 1"
