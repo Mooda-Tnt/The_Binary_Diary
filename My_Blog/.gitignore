@@ -23,3 +23,6 @@
 /static/img/about/
 /src/pages/about.mdx
 /src/pages/repositories.mdx
+
+# To ignore.
+/template.md
