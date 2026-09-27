@@ -40,7 +40,7 @@ Now that we know why learning vi is useful, let's briefly talk about what it act
 
 Vi (pronounced "_vee-eye_") is a lightweight text editor used to create and edit plain text files. It comes in many different flavors and implementations, among them the most popular one, called Vim (_Vi Improved_).
 
-In this series, we'll focus on the commands that are common to traditional vi like file manipulation and text editing (inserting a text, deleting a text, moving a text, copying a text, and changing a word), allowing you to work comfortably regardless of which implementation you encounter.
+In this series, we'll focus on the commands that are common to traditional vi, such as file manipulation, cursor movement, and text editing (inserting text, deleting text, moving text, copying text, and changing a word), allowing you to work comfortably regardless of which implementation you encounter.
 
 ## Vi Modes
 
