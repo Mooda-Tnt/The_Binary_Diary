@@ -92,6 +92,6 @@ It is worth mentioning here that if you have not made any changes and want to qu
 
 ## Closing Comments
 
-The interface of vi is pretty straightforward once we know its layout. From simple actions, such as editing a file or quitting vi, to more complicated actions, vi performs them all through commands. There are too many commands in vi to memorize, so it is a good practice to write them down and have a peek at them whenever you need to remember a command. And actually, I recommend splitting them up into categories and creating a cheat sheet so they become easier to remember. Have a look at mine [here](BROKEN_LINK), which I expand and add to every time I learn something new in vi/Vim.
+The interface of vi is pretty straightforward once we know its layout. From simple actions, such as editing a file or quitting vi, to more complicated actions, vi performs them all through commands. There are too many commands in vi to memorize, so it is a good practice to write them down and have a peek at them whenever you need to remember a command. And actually, I recommend splitting them up into categories and creating a cheat sheet so they become easier to remember. Have a look at mine [here](https://gist.github.com/Mooda-Tnt/a759b2d9b0b1ee9e04d2233021dbf81b), which I expand and add to every time I learn something new in vi/Vim.
 
 That's enough vi for one day. Hopefully, you learned a thing or two along the way. See you in the next one, where we'll learn new commands for moving around in vi.
