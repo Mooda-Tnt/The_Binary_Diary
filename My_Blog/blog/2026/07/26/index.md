@@ -84,7 +84,7 @@ In case you are not happy with the edits you have made, there are two commands t
 
 Both commands discard all the edits you have made to the buffer since the last save. However, while `:e!` reloads the last saved version of the file, `:q!` quits vi altogether.
 
-It is worth mentioning here that if you have not made any changes and want to quit vi, just type in:
+It is worth mentioning here that you can quit vi, if you have no unsaved changes, using the following command:
 
 <Terminal wrap={true}>
 :q
