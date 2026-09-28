@@ -15,7 +15,7 @@ tags: [vi, tutorials]
 <Intro>
 ## Introduction
 
-In the previous blog post, we got acquainted with vi's interface and learned some commands for saving files and quitting vi. Today's article will explain what a line is in vi and introduce new commands for simple movements in vi. Let's jump right in!
+In the previous blog post, we got acquainted with vi's interface and learned some commands for saving files and quitting vi. Today's article will explain what a line is in vi and introduce new commands for basic movements in vi. Let's jump right in!
 </Intro>
 
 <!-- truncate -->
