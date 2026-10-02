@@ -1,5 +1,5 @@
 ---
-slug: ctf/the_100_re_challenges_challenge/i_just_suck_at_ctfs!
+slug: ctf/the-100-re-challenges-challenge/i-just-suck-at-ctfs!
 title: I Just Suck at CTFs!
 date: 2026-09-20
 description:  A reflection on why I suck at CTFs, the mistakes that got me here, and the 100 reverse engineering challenges I came up with to change that.
