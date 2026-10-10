@@ -17,7 +17,7 @@ tags: [ctf, pico_ctf, 100_re_challenges_challenge, reverse]
 
 In this writeup, I kick off my **100 Reverse Engineering Challenges Challenge**. I will provide a detailed step-by-step explanation with full transparency, as I promised.
 
-The binary in this challenge, named reverse_cipher, reads the flag file, performs some operations on it, and eventually writes the result to the file provided by the challenge. So I had to take the file provided by the challenge and reverse my way to the flag.
+The challenge, named reverse_cipher, provides a binary that reads the flag file, performs some operations on it, and eventually writes the result to the file provided by the challenge. So I had to take the file provided by the challenge and reverse my way to the flag.
 
 </Intro>
 
