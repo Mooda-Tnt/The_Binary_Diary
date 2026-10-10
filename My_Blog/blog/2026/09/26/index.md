@@ -17,7 +17,7 @@ tags: [ctf, pico-ctf, 100-re-challenges-challenge, reverse-engineering, writeups
 
 In this writeup, I kick off my **100 Reverse Engineering Challenges Challenge**. I will provide a detailed step-by-step explanation with full transparency, as I promised.
 
-The challenge, named reverse_cipher, provides a binary that reads the flag file, performs some operations on it, and eventually writes the result to the file provided by the challenge. So I had to take the file provided by the challenge and reverse my way to the flag.
+The challenge, named ***reverse_cipher***, provides a binary that reads the flag file, performs some operations on it, and eventually writes the result to the file provided by the challenge. So I had to take the file provided by the challenge and reverse my way to the flag.
 
 </Intro>
 
@@ -202,7 +202,7 @@ As we can see from the writeups' script above, it uses the `os` module to access
 
 The main difference between my approach and the approach used in this writeup is the use of `mmap`. When accessing individual bytes through an `mmap` object, Python returns their integer values directly. Therefore, there is no need to use `ord()` to convert characters into integers. We can directly manipulate these integer values, perform mathematical operations on them, and then use `chr()` to convert the results back into their corresponding characters.
 
-## Lessons Learned and Key Takeaways.
+## Lessons Learned and Key Takeaways
 
 This challenge merely involved applying simple transformations to the flag file. As far as I am concerned, it is not even a medium-level challenge; it should be placed in the Simple category.
 
