@@ -6,8 +6,8 @@ description:  A reflection on why I suck at CTFs, the mistakes that got me here,
 authors: [mooda-tnt]
 image: /img/blog_posts/the-100-re-challenges-challenge_i-just-suck-at-ctfs.png
 series: "The 100 Reverse Engineering Challenges Challenge"
-mainTag: 100_re_challenges_challenge
-tags: [ctf, pico_ctf, 100_re_challenges_challenge, cybersecurity, learning_journey]
+mainTag: 100-re-challenges-challenge
+tags: [ctf, 100-re-challenges-challenge, cybersecurity, learning-journey, reverse-engineering]
 ---
 
 ![The 100 Reverse Engineering Challenges Challenge](/img/blog_posts/the-100-re-challenges-challenge_i-just-suck-at-ctfs.png)

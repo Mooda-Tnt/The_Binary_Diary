@@ -5,8 +5,8 @@ date: 2026-08-30
 description: Common calling conventions in C/C++.
 authors: [mooda-tnt]
 image: /img/blog_posts/calling-conventions-in-c-and-c++-code.png
-mainTag: reverse
-tags: [reverse, c, c++, assembly, low_level, writeups, intermediate]
+mainTag: reverse-engineering
+tags: [reverse-engineering, c, cpp, assembly, low-level, writeups, intermediate]
 ---
 
 ![Calling Conventions in C and C++ Code.](/img/blog_posts/calling-conventions-in-c-and-c++-code.png)

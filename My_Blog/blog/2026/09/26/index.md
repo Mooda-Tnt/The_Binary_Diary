@@ -6,8 +6,8 @@ description: Writeup of the first challenge in the 100 Reverse Engineering Chall
 authors: [mooda-tnt]
 image: /img/blog_posts/the-100-re-challenges-challenge_challenge-1.png
 series: "The 100 Reverse Engineering Challenges Challenge"
-mainTag: 100_re_challenges_challenge
-tags: [ctf, pico_ctf, 100_re_challenges_challenge, reverse]
+mainTag: 100-re-challenges-challenge
+tags: [ctf, pico-ctf, 100-re-challenges-challenge, reverse-engineering, writeups]
 ---
 
 ![The 100 RE Challenges Challenge - Challenge #1](/img/blog_posts/the-100-re-challenges-challenge_challenge-1.png)
